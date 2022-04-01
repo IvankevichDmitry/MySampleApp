@@ -1,8 +1,16 @@
+html {
+    height: 100%;
+}
+
 body {
     margin: 0;
     width: auto;
     background-color: #fac486;
+    height: 100%;
   }
+#root {
+    height: 100%;
+}
 
 /* ------- ШАПКА ---------- */
 
@@ -28,9 +36,9 @@ body {
 
 /* -------- ОСНОВНОЕ СОДЕРЖАНИЕ ------------*/
 
-.section {
-    display: grid;
-    grid-template-columns: 15% auto;
+.main {
+    display: flex;
+    height: 100%;
 }
 
 .leftmenu {
@@ -49,9 +57,8 @@ body {
   margin: 10px;
   padding: 20px;
   height: 30px;
+  width: 30px;
   font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #ffff00;
+  border-radius: 50%;
 }
