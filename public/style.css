@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    width: auto;
+    background-color: #fac486;
+  }
+
+/* ------- ШАПКА ---------- */
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: #1d3c45;
+    border: 1 px solid black;
+}
+
+.logopage>img {
+    width: 100px;
+}
+
+.infName {
+    margin: 10px 50px 10px 0px;
+    color: white;
+    font-size: 20px;
+}
+
+/* -------- ОСНОВНОЕ СОДЕРЖАНИЕ ------------*/
+
+.section {
+    display: grid;
+    grid-template-columns: 15% auto;
+}
+
+.leftmenu {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: #d2601a;
+}
+
+.rightcontent {
+    display: flex;
+    flex-direction: column;
+}
+
+.section .button {
+  margin: 10px;
+  padding: 20px;
+  height: 30px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
