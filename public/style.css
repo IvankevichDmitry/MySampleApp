@@ -8,6 +8,7 @@ body {
     background-color: #fac486;
     height: 100%;
   }
+
 #root {
     height: 100%;
 }
@@ -19,9 +20,8 @@ body {
     grid-template-columns: 1fr auto;
     align-items: center;
     width: 100%;
-    height: 100px;
+    height: 10%;
     background-color: #1d3c45;
-    border: 1 px solid black;
 }
 
 .logopage>img {
@@ -32,13 +32,14 @@ body {
     margin: 10px 50px 10px 0px;
     color: white;
     font-size: 20px;
+    font-style: oblique;
 }
 
 /* -------- ОСНОВНОЕ СОДЕРЖАНИЕ ------------*/
 
 .main {
     display: flex;
-    height: 100%;
+    height: 90%;
 }
 
 .leftmenu {
@@ -48,17 +49,28 @@ body {
     background-color: #d2601a;
 }
 
-.rightcontent {
+.pages {
     display: flex;
     flex-direction: column;
 }
 
-.section .button {
+ /* Кнопки в меню */
+
+.leftmenu .button:first-child {
+    margin-top: 50px;
+}
+
+.leftmenu .button:hover {
+    background-color: rgb(255, 255, 0);
+}
+
+.leftmenu .button {
   margin: 10px;
   padding: 20px;
   height: 30px;
   width: 30px;
   font-size: 20px;
-  background-color: #ffff00;
+  background-color: #ffffff;
+  border: 3px solid #1d3c45;
   border-radius: 50%;
 }

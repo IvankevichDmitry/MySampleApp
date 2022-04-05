@@ -1,12 +1,17 @@
+// ОСНОВНОЕ СОДЕРЖАНИЕ
+// 1.
 import { createDiv } from "../../helpers/creators";
-import pages from "../Pages/pages";
-import menu from "../Menu/menu"
+import createPages from "../Pages/pages";
+import createMenu from "../Menu/menu"
 
-
+// 2.
 const createMain = () => {
     const main = createDiv({
         className: 'main'
     })
+
+    let menu = createMenu()
+    let pages = createPages()
 
     main.appendChild(menu)
     main.appendChild(pages)
@@ -15,4 +20,5 @@ const createMain = () => {
     return main
 }
 
+// 3.
 export default createMain

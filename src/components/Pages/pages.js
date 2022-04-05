@@ -1,6 +1,9 @@
+// ПРАВАЯ ЧАСТЬ ОСНОВНОГО СОДЕРЖАНИЯ
+
+// 1.
 import { createDiv } from "../../helpers/creators"
 
-
+// 2.
 const createPages = () => {
     const pages = createDiv({
         className: 'pages'
@@ -11,6 +14,5 @@ const createPages = () => {
     return pages
 }
 
-const pages = createPages()
-
-export default pages
+// 3.
+export default createPages

@@ -1,5 +1,8 @@
+// ВВЕРХ САЙТА
+// 1.
 import { createSection, createDiv } from "../../helpers/creators";
 
+// 2.
 const creatHeader = () => {
   const header = createSection({
     className: "header"
@@ -21,7 +24,6 @@ const creatHeader = () => {
   return header
 }
 
-const header = creatHeader()
-
-export default header
+// 3.
+export default creatHeader
 

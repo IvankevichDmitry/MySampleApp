@@ -1,21 +1,19 @@
-// Часть 1. Создаем на странице содержание с помощью JS в index.html в тег div.
-
-// 1. Импорты модулей с содержанием
-// Шапка
-import header from './components/Header/header'
-// Содержание
+// 1.
+import creatHeader from './components/Header/header'
 import createMain from './components/Main/main'
 
-// 2. Ищем на странице div, куда будем помещать все импорты.
+// 2. 
 let root = document.getElementById('root');
 
-// 3. Создаем функцию, которая вставляет на страницу все модули.
+// 3. 
 const createDOM = () => {
-  root.appendChild(header)
-  root.appendChild(createMain())
-}
+  const header = creatHeader()
+  const main = createMain()
 
-// 4. Запускаем функцию
+  root.appendChild(header)
+  root.appendChild(main)
+};
+
 createDOM()
 
 

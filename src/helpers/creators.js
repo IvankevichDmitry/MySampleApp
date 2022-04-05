@@ -1,3 +1,5 @@
+// ФУНКИЦИИ КОТОРЫЕ СОЗДАЮТ ТЕГИ НА СТРАНИЦЕ
+
 export const createSection = ({ className }) => {
     const section = document.createElement('div');
     if (className)
@@ -25,6 +27,5 @@ export const createDiv = ({ className, innerHTML }) => {
 }
 
 
-export const createInput = ({ }) => {
-
-}
+// export const createInput = ({ }) => {
+// }

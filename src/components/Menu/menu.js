@@ -1,6 +1,8 @@
+// ЛЕВОЕ МЕНЮ И КНОПКИ
+// 1.
 import { createSection, creatButton } from "../../helpers/creators";
 
-
+// 2.
 const createMenu = () => {
 
     const menu = createSection({
@@ -21,7 +23,5 @@ const createMenu = () => {
     return menu;
 };
 
-const menu = createMenu()
-
-
-export default menu
+// 3.
+export default createMenu
