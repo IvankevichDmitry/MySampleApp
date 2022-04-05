@@ -10,7 +10,7 @@ const creatHeader = () => {
 
   const logo = createDiv({
     className: 'logopage',
-    innerHTML: "<img src='img/home.png'>"
+    innerHTML: "<img src='img/1.png'>"
   })
 
   const createName = createDiv({

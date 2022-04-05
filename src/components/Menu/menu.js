@@ -8,9 +8,9 @@ const createMenu = () => {
     const menu = createSection({
         className: 'leftmenu'
     })
-
     const usersButton = creatButton({
-        className: 'button'
+        className: 'button',
+        // img: "<img src='../../img/users.png'>"
     })
 
     const settingButton = creatButton({

@@ -7,7 +7,7 @@ export const createSection = ({ className }) => {
     return section
 }
 
-export const creatButton = ({ className, type, id }) => {
+export const creatButton = ({ className, type, id}) => {
     const button = document.createElement('button');
     if (className)
         button.className = className
