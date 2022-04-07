@@ -1,3 +1,4 @@
+/* ------- ОБЩИЕ НАСТРОЙКИ СТРАНИЦЫ ------- */
 html {
     height: 100%;
 }
@@ -5,7 +6,6 @@ html {
 body {
     margin: 0;
     width: auto;
-    background-color: #fac486;
     height: 100%;
   }
 
@@ -13,14 +13,15 @@ body {
     height: 100%;
 }
 
-/* ------- ШАПКА ---------- */
+/* ------------- 1 HEADER ------------- */
 
 .header {
+    position: sticky;
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
     width: 100%;
-    height: 10%;
+    min-height: 10%;
     background-color: #1d3c45;
 }
 
@@ -36,23 +37,21 @@ body {
     font-style: oblique;
 }
 
-/* -------- ОСНОВНОЕ СОДЕРЖАНИЕ ------------*/
+/* -------- 2 ОСНОВНОЕ СОДЕРЖАНИЕ ------------*/
 
 .main {
     display: flex;
-    height: 90%;
+    min-height: 90%;
+    width: 100%;
 }
 
+/* -------- 2.1 МЕНЮ ------------*/
 .leftmenu {
+    width: auto;
     margin: 0px;
     display: flex;
     flex-direction: column;
     background-color: #d2601a;
-}
-
-.pages {
-    display: flex;
-    flex-direction: column;
 }
 
  /* Кнопки в меню */
@@ -66,7 +65,7 @@ body {
     border-radius: 50%;
   }
 
-.leftmenu .button:first-child {
+.leftmenu .button:nth-child(1) {
     margin-top: 50px;
     background-size: 100%;
     background-image: url("/img/users.png");
@@ -90,4 +89,71 @@ body {
     background-color: yellow;
 }
 
+/* -------- 2.2 Pages ------------*/
+.pages {
+    margin: 0px;
+    width: 100%;
+}
 
+/* Информация по пользователям */
+.userPage {
+    margin: 30px auto 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+}
+
+.userInformation {
+    font-size: 15px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.userPage h2 {
+    text-align: center;
+    font-size: 30px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.userPage p {
+    margin: 0px 0px 5px 20px;
+    color: #081f25;
+    font-style: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.blockName p,
+.blockEmail p,
+.blockName .username,
+.blockEmail .useremail{
+    display: inline;
+}
+
+/* ----------- Полоса загрузки ------------ */
+  .areaLine {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:500px;
+    height:150px;
+  }
+  .areaLine h3 {
+    text-align: center;
+  }
+  .areaLine .lineGradient {
+    width: 0%;
+    height: 30px;
+    background: linear-gradient(to right,rgb(51, 253, 93),rgb(71, 185, 236), rgb(82, 71, 236), rgb(236, 219, 71));
+    margin-top: 10px;
+    background-size: 500px 5px;
+    border-radius: 5%;
+    animation: loading 3s ease-in-out forwards;
+  }
+  
+  @keyframes loading {
+    to {
+    width:100%;
+    }
+  }
