@@ -13,7 +13,7 @@ body {
     height: 100%;
 }
 
-/* ------------------------ 1 HEADER --------------------- */
+/* ------------- 1 HEADER ------------- */
 
 .header {
     position: sticky;
@@ -23,6 +23,7 @@ body {
     width: 100%;
     min-height: 10%;
     background-color: #1d3c45;
+    border-bottom: 1px solid white;
 }
 
 .logopage>img {
@@ -37,7 +38,7 @@ body {
     font-style: oblique;
 }
 
-/* --------------------- 2  ГЛАВНАЯ СТАРНИЦА ------------------*/
+/* -------- 2 ОСНОВНОЕ СОДЕРЖАНИЕ ------------*/
 
 .main {
     display: flex;
@@ -45,13 +46,14 @@ body {
     width: 100%;
 }
 
-/* --------------------- 2.1 МЕНЮ (левая часть) ---------------*/
+/* -------- 2.1 МЕНЮ ------------*/
 .leftmenu {
     width: auto;
     margin: 0px;
     display: flex;
     flex-direction: column;
-    background-color: #d2601a;
+    background-color: #1d3c45;
+    border-right: 1px solid white;
 }
 
  /* Кнопки в меню */
@@ -61,7 +63,7 @@ body {
     height: 30px;
     width: 30px;
     background-color: white;
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 50%;
   }
 
@@ -86,15 +88,14 @@ body {
     -o-box-shadow: 0 0 10px white;
     -ms-box-shadow: 0 0 10px white;
     -webkit-box-shadow: 0 0 10px white;
-    background-color: yellow;
+    background-color: rgb(19, 156, 211);
 }
 
-/* ---------------------- 2.2 Pages (правая часть) --------------------*/
-
-/*  ---- 1. Users   ---*/
+/* -------- 2.2 Pages ------------*/
 .pages {
     margin: 0px;
     width: 100%;
+    background-color: #353232;
 }
 
 /* Информация по пользователям */
@@ -108,7 +109,8 @@ body {
 .userInformation {
     font-size: 15px;
     margin: 10px;
-    border: 1px solid black;
+    border: 1px solid white;
+    color: white
 }
 
 .userPage h2 {
@@ -116,11 +118,12 @@ body {
     font-size: 30px;
     margin: 0px;
     padding: 0px;
+    color: white;
 }
 
 .userPage p {
     margin: 0px 0px 5px 20px;
-    color: #081f25;
+    color: white;
     font-style: 'Courier New', Courier, monospace;
     font-weight: bold;
 }
@@ -132,7 +135,34 @@ body {
     display: inline;
 }
 
-/* -----------2. Settings ------------ */
+/* ----------- Settings ------------ */
+.settingsPage h1 {
+    text-align: center;
+    font-size: 30px;
+    color: white
+}
+
+.settingsPage .switchButton {
+    background-color: white;
+    color: black;
+    height: 50px;
+    width: 100px;
+    padding: 8px;
+    font-size: 30px;
+    border: 1px solid white;
+}
+
+.settingsPage .button:hover {
+    box-shadow: 0 0 30px white;
+    -moz-box-shadow: 0 0 30px white;
+    -o-box-shadow: 0 0 30px white;
+    -ms-box-shadow: 0 0 30px white;
+    -webkit-box-shadow: 0 0 30px white;
+    background-color: white;
+    color: black;
+}
+
+
 /* -- Кнопка --- */
 .settingsPage {
     display: flex;
@@ -149,7 +179,7 @@ body {
 
 :root {
     --height: 150px;
-    --track-color: #d2601a;
+    --track-color: yellow;
     --knob-color: white;
     --active-track-color: black;
     --active-knob-color: white;
@@ -204,7 +234,6 @@ body {
 .switch input[type="checkbox"]:checked ~ div:before {
     background-color: var(--active-track-color);
 }
-
 
 /* ----------- Полоса загрузки ------------ */
   .areaLine {

@@ -1,24 +1,56 @@
+import { createRef } from "react/cjs/react.production.min"
 import { createDiv } from "../../helpers/creators"
+import { creatButton } from "../../helpers/creators"
+import { creatInput } from "../../helpers/creators"
 
 const createSettingsPage = () => {
     const settingsPage = createDiv({
         className: 'settingsPage',
         id: "settingsPage",
-        appendChildElement: wordDownload()
+       
     })
 
-    // Aнимация полосы Загрузки
-    function wordDownload() {
-        const div1 = createDiv({className: "areaLine"})
-        const h3 = document.createElement("h3")
-        h3.innerHTML = "Loading pages. Wait, please."
-        const div2 = createDiv({className: "lineGradient"})
-        div1.appendChild(h3)
-        div1.appendChild(div2)
-        return div1
-    }
+    function creatSwitch() {
+        const wrapper = createDiv({
+            className: "wrapper",
+            innerHTML: "<h1>Theme Switcher</h1>"
+        })
+  
+        const switchButton = createDiv({
+            className: "switch",
+        })
 
+        const usalyDiv = createDiv({
+            className: "free",
+        })
+
+        let input = document.createElement("input")
+        input.type = "checkbox"
+        input.name = "switch"
+        input.id = "switchMode2"
+
+        settingsPage.appendChild(wrapper);
+        wrapper.appendChild(switchButton)
+        switchButton.appendChild(input)
+        switchButton.appendChild(usalyDiv)
     
+        function createThemeColorPage() {
+             let theme = document.getElementById("theme")
+    
+             if (theme.getAttribute("href")==="style.css") {
+                 theme.href = "dark-theme.css"
+             } else {
+                 theme.href = "style.css"
+             
+            }
+        }
+
+        input.addEventListener("click", createThemeColorPage);
+    }
+    
+    
+    creatSwitch()
+
     return settingsPage
 }
 

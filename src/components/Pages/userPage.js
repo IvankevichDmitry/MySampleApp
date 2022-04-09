@@ -84,5 +84,15 @@ export function clickFirsButtomColor() {
     buttonActive2.style.backgroundColor = "";
 };
 
+export function changeMenuButton(id) {
+    return (id) => {
+        const leftMenu = document.querySelector('.leftmenu')
+        const allButtons = leftMenu.querySelectorAll('button')
+        allButtons.forEach(btn => btn.classList.remove('active'))
+        const newActive = leftMenu.querySelector('#'+id)
+        newActive.classList.add('active')
+    }
+}
+
 // 3.
 export default createUserPage

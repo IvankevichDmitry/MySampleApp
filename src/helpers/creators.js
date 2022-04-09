@@ -7,16 +7,19 @@ export const createSection = ({ className }) => {
     return section
 }
 
-export const creatButton = ({ className, type, id, clickFn, clickColor}) => {
+export const creatButton = ({ className, innerHTML, type, id, clickFn, clickColor}) => {
     const button = document.createElement('button');
     if (className)
         button.className = className
     if (id)
         button.id = id
+    if (innerHTML)
+        button.innerHTML = innerHTML
     if (clickFn)
        button.addEventListener("click", clickFn)
     if (clickColor)
     button.addEventListener("click", clickColor)
+    // button.addEventListener("click", clickColor(id))
     return button;
 };
 
@@ -31,6 +34,16 @@ export const createDiv = ({ className, innerHTML, id, appendChildElement}) => {
     if (appendChildElement)
         div.appendChild(appendChildElement)
     return div
+}
+
+export const creatInput = ({type, id, name}) => {
+    const input = document.createElement("input");
+    if (type)
+    input.type = type
+    if (id)
+    input.id = id
+    if (name)
+    input.name = name
 }
 
 

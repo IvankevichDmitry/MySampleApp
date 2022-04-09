@@ -8,6 +8,8 @@ import createUserPage from "../Pages/userPage";
 import { clickFirsButtomColor } from "../Pages/userPage";
 import { clickSeccondButtomColor } from "../Pages/settingsPage";
 
+import { changeMenuButton } from "../Pages/userPage";
+
 // 2.
 const createMenu = () => {
 
@@ -27,14 +29,18 @@ const createMenu = () => {
 
     const usersButton = creatButton({
         className: 'button button1',
+        id: "usersButton",
         clickFn: apdatePages(createUserPage),
         clickColor: clickFirsButtomColor
+        // clickColor: changeMenuButton
     })
 
     const settingButton = creatButton({
         className: "button button2",
+        id: "settingsButton",
         clickFn: apdatePages(createSettingsPage),
         clickColor: clickSeccondButtomColor
+        // clickColor: changeMenuButton
     })
 
     menu.appendChild(usersButton)
