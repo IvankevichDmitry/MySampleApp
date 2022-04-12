@@ -7,13 +7,13 @@ const createSettingsPage = () => {
     const settingsPage = createDiv({
         className: 'settingsPage',
         id: "settingsPage",
-       
+        innerHTML: "<h1>Settings</h1>"
     })
 
     function creatSwitch() {
         const wrapper = createDiv({
             className: "wrapper",
-            innerHTML: "<h1>Theme Switcher</h1>"
+            innerHTML: "<p>Theme Switcher</p>"
         })
   
         const switchButton = createDiv({
@@ -53,15 +53,6 @@ const createSettingsPage = () => {
 
     return settingsPage
 }
-
-
-// Кнопки цвета
-export function clickSeccondButtomColor() {
-    const buttonActive1 = document.querySelector(".button:nth-child(1)")
-    const buttonActive2 = document.querySelector(".button:nth-child(2)")
-    buttonActive1.style.backgroundColor = "";
-    buttonActive2.style.backgroundColor = "yellow";
-};
 
 // 3.
 export default createSettingsPage

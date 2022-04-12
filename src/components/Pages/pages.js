@@ -12,10 +12,13 @@ const createPages = () => {
     })
 
     
-
+    
     pages.addEventListener("load", pages.appendChild(createUserPage()))
+
+
     return pages
 }
+
 
 // 3.
 export default createPages

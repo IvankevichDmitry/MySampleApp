@@ -76,23 +76,22 @@ const createUserPage = () => {
 }
 
 
-// Кнопки цвета
-export function clickFirsButtomColor() {
-    const buttonActive1 = document.querySelector(".button:nth-child(1)")
-    const buttonActive2 = document.querySelector(".button:nth-child(2)")
-    buttonActive1.style.backgroundColor = "yellow";
-    buttonActive2.style.backgroundColor = "";
-};
+// Кнопки цвета при нажатии
+export function clickButtomColor() {
+    let elements = document.querySelectorAll(".button:hover")
+    let arrHover = Array.from(elements)
+    let buttonHover = arrHover[0];
 
-export function changeMenuButton(id) {
-    return (id) => {
-        const leftMenu = document.querySelector('.leftmenu')
-        const allButtons = leftMenu.querySelectorAll('button')
-        allButtons.forEach(btn => btn.classList.remove('active'))
-        const newActive = leftMenu.querySelector('#'+id)
-        newActive.classList.add('active')
+    let buttonAll = document.querySelectorAll("button")
+    let arrAll = Array.from(buttonAll)
+    for (let button of arrAll) {
+        if (button == buttonHover) {
+            button.style.backgroundColor = "yellow"
+        } else {
+            button.style.background = ""
+        }
     }
-}
+};
 
 // 3.
 export default createUserPage

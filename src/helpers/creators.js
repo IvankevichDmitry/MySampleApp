@@ -7,7 +7,7 @@ export const createSection = ({ className }) => {
     return section
 }
 
-export const creatButton = ({ className, innerHTML, type, id, clickFn, clickColor}) => {
+export const creatButton = ({ className, innerHTML, id, style, clickFn, clickColor}) => {
     const button = document.createElement('button');
     if (className)
         button.className = className
@@ -15,6 +15,8 @@ export const creatButton = ({ className, innerHTML, type, id, clickFn, clickColo
         button.id = id
     if (innerHTML)
         button.innerHTML = innerHTML
+    if (style)
+    button.style.backgroundColor = style
     if (clickFn)
        button.addEventListener("click", clickFn)
     if (clickColor)

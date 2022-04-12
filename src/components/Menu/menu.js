@@ -3,12 +3,9 @@
 import { createSection, creatButton } from "../../helpers/creators";
 
 import createSettingsPage from "../Pages/settingsPage";
-import createUserPage from "../Pages/userPage";
+import createUserPage, { hello } from "../Pages/userPage";
 
-import { clickFirsButtomColor } from "../Pages/userPage";
-import { clickSeccondButtomColor } from "../Pages/settingsPage";
-
-import { changeMenuButton } from "../Pages/userPage";
+import { clickButtomColor } from "../Pages/userPage";
 
 // 2.
 const createMenu = () => {
@@ -25,27 +22,25 @@ const createMenu = () => {
             pages.appendChild(callback());
         }
     }
-
+     
 
     const usersButton = creatButton({
         className: 'button button1',
         id: "usersButton",
+        style: "yellow",
         clickFn: apdatePages(createUserPage),
-        clickColor: clickFirsButtomColor
-        // clickColor: changeMenuButton
+        clickColor: clickButtomColor,
     })
 
     const settingButton = creatButton({
         className: "button button2",
         id: "settingsButton",
         clickFn: apdatePages(createSettingsPage),
-        clickColor: clickSeccondButtomColor
-        // clickColor: changeMenuButton
+        clickColor: clickButtomColor
     })
 
     menu.appendChild(usersButton)
     menu.appendChild(settingButton)
-
     return menu;
 };
 

@@ -1,6 +1,7 @@
 /* ------- ОБЩИЕ НАСТРОЙКИ СТРАНИЦЫ ------- */
 html {
     height: 100%;
+    overflow: hidden;
 }
 
 body {
@@ -95,14 +96,34 @@ body {
 .pages {
     margin: 0px;
     width: 100%;
+    
 }
+
+/* Скрол */
+.pages .userPage:hover {
+    overflow-y: scroll;
+    height: 800px;
+}
+
+.pages .userPage::-webkit-scrollbar {
+    width: 10px;
+  }
+.pages .userPage::-webkit-scrollbar-track {
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    border-radius: 10px;
+  }
+.pages .userPage::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(180deg, #00c6fb, #005bea);
+  }
 
 /* Информация по пользователям */
 .userPage {
     margin: 30px auto 0px auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly; 
+    justify-content: space-evenly;
+    
 }
 
 .userInformation {
@@ -133,25 +154,38 @@ body {
 }
 
 /* -----------2. Settings ------------ */
-/* -- Кнопка --- */
+
 .settingsPage {
     display: flex;
     height: 100%;
-}
-.settingsPage .wrapper {
-    height: 100%;
-    width: 100%;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
+}
+
+.settingsPage h1 {
+text-align: center;
+}
+
+/* -- Кнопка --- */
+.settingsPage .wrapper {
+    border: 1px solid black;
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    padding: 10px;
+}
+
+.wrapper p {
+    font-size: 25px;
+    margin-right: 10px;
+    height: 30px;
 }
 
 :root {
-    --height: 150px;
+    --height: 30px;
     --track-color: #d2601a;
     --knob-color: white;
-    --active-track-color: black;
+    --active-track-color: #d2601a;
     --active-knob-color: white;
 }
 
