@@ -1,0 +1,22 @@
+{
+    "users": [
+        {
+        "id": 1,
+        "name": "Dmitry"
+        },
+        {
+        "id": 2,
+        "name": "Tima"
+        }
+    ],
+    "mobile": [
+        {
+        "id": 1,
+        "model": "Iphone"
+        },
+        {
+        "id": 2,
+        "model": "Samsung"
+        }
+    ]
+}
