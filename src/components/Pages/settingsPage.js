@@ -1,7 +1,4 @@
-import { createRef } from "react/cjs/react.production.min"
 import { createDiv } from "../../helpers/creators"
-import { creatButton } from "../../helpers/creators"
-import { creatInput } from "../../helpers/creators"
 
 const createSettingsPage = () => {
     const settingsPage = createDiv({
@@ -19,10 +16,7 @@ const createSettingsPage = () => {
         const switchButton = createDiv({
             className: "switch",
         })
-
-        const usalyDiv = createDiv({
-            className: "free",
-        })
+        const usalyDiv = createDiv({ className: "free"})
 
         let input = document.createElement("input")
         input.type = "checkbox"
@@ -47,7 +41,6 @@ const createSettingsPage = () => {
 
         input.addEventListener("click", createThemeColorPage);
     }
-    
     
     creatSwitch()
 

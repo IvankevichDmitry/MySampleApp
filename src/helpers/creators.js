@@ -38,14 +38,15 @@ export const createDiv = ({ className, innerHTML, id, appendChildElement}) => {
     return div
 }
 
-export const creatInput = ({type, id, name}) => {
+export const creatInput = ({type, id, className}) => {
     const input = document.createElement("input");
     if (type)
     input.type = type
     if (id)
     input.id = id
-    if (name)
-    input.name = name
+    if (className)
+    input.className = className
+    return input
 }
 
 

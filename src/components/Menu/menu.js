@@ -3,9 +3,9 @@
 import { createSection, creatButton } from "../../helpers/creators";
 
 import createSettingsPage from "../Pages/settingsPage";
-import createUserPage, { hello } from "../Pages/userPage";
+import createUserPage from "../Pages/userPage";
 
-import { clickButtomColor } from "../Pages/userPage";
+import { clickButtomColor } from "../../helpers/color";
 
 // 2.
 const createMenu = () => {

@@ -16,4 +16,3 @@ const createDOM = () => {
 
 createDOM()
 
-

@@ -1,7 +1,7 @@
 /* ------- ОБЩИЕ НАСТРОЙКИ СТРАНИЦЫ ------- */
 html {
     height: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 body {
@@ -81,7 +81,8 @@ body {
     background-position: 50% 50%;
 }
 
-.leftmenu .button:hover {
+.leftmenu .button:hover,
+.creatFormAddUsers input:hover {
     box-shadow: 0 0 10px white;
     -moz-box-shadow: 0 0 10px white;
     -o-box-shadow: 0 0 10px white;
@@ -92,15 +93,15 @@ body {
 
 /* ---------------------- 2.2 Pages (правая часть) --------------------*/
 
-/*  ---- 1. Users   ---*/
+/*  ----------------- 1. Users   ------------------*/
 .pages {
     margin: 0px;
     width: 100%;
-    
+    height: 100%;
 }
 
 /* Скрол */
-.pages .userPage:hover {
+/* .pages .userPage:hover {
     overflow-y: scroll;
     height: 800px;
 }
@@ -115,9 +116,34 @@ body {
 .pages .userPage::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: linear-gradient(180deg, #00c6fb, #005bea);
-  }
+  } */
 
-/* Информация по пользователям */
+/* -------- Форма ------*/
+
+.creatFormAddUsers {
+    border: 1px solid black;
+    width: 30%;
+    height: 120px;
+    padding: 20px;
+    margin: 10px 35% 10px 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 700;
+    background: linear-gradient(180deg, #00c6fb, #005bea);
+}
+
+.creatFormAddUsers p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.creatFormAddUsers input {
+    height: 30px;
+}
+
+/* --------------- Информация по пользователям------------------ */
 .userPage {
     margin: 30px auto 0px auto;
     display: flex;
@@ -127,9 +153,22 @@ body {
 }
 
 .userInformation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     font-size: 15px;
     margin: 10px;
     border: 1px solid black;
+}
+
+.userInformation button {
+    font-weight: 700px;
+    color: red;
+    background-color: #1d3c45;
+    height: 30px;
+    width: 30px;
+    margin-right: 30px;
 }
 
 .userPage h2 {
@@ -153,7 +192,7 @@ body {
     display: inline;
 }
 
-/* -----------2. Settings ------------ */
+/* ------------------------2. Settings ----------------------------- */
 
 .settingsPage {
     display: flex;

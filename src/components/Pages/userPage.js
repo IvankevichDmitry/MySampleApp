@@ -1,42 +1,63 @@
-import { createDiv } from "../../helpers/creators";
+import { createDiv, creatInput } from "../../helpers/creators";
+import { creatButton } from "../../helpers/creators";
+import { animationLine } from "../../helpers/animation";
 
 const createUserPage = () => {
     const userPage = createDiv({
         className: 'userPage',
         id: "userPage", 
-        appendChildElement: wordDownload()
+        appendChildElement: animationLine()
     })
 
-    // Aнимация полосы Загрузки
-    function wordDownload() {
-        const div1 = createDiv({className: "areaLine"})
-        const h3 = document.createElement("h3")
-        h3.innerHTML = "Loading pages. Wait, please."
-        const div2 = createDiv({className: "lineGradient"})
-        div1.appendChild(h3)
-        div1.appendChild(div2)
-        return div1
-    }
-
     async function downloadUsers() {
-        const response = await fetch("https://jsonplaceholder.typicode.com/users");
+        const response = await fetch("http://localhost:5555/users");
         const arr = await response.json();
 
         userPage.innerHTML = ""
         
-                    const createTitle = createDiv({
-                        innerHTML: "<h2>Users</h2>"
-                    });
+                                const createTitle = createDiv({
+                                    innerHTML: "<h2>Users</h2>"
+                                });
+                                userPage.appendChild(createTitle)
 
-                    userPage.appendChild(createTitle)
+                                        const createFormAddUsers = createDiv({
+                                            className: "creatFormAddUsers",
+                                            innerHTML: "<p>Enter a new user</p>"
+                                        });
+                                        userPage.appendChild(createFormAddUsers)
+
+                                        const createNameInput = creatInput({
+                                            type: "text",
+                                            id: "name",
+                                            className: "name",
+                                            text: "Name"
+                                        });
+
+                                        console.log(createNameInput)
+
+                                        const createMailInput = creatInput({
+                                            type: "text",
+                                            id: "mail",
+                                            className: "mail"
+                                        })
+                                        createFormAddUsers.appendChild(createNameInput)
+                                        createNameInput.before("Name")
+                                        createFormAddUsers.appendChild(createMailInput)
+                                        createMailInput.before("Mail")
 
                     function createUserInform(id, fullName, email) {
-                    
-                        const createUserArea = createDiv({
+
+                    const createUserArea = createDiv({
                         id: id,
                         className: `userInformation ${id}`,
-                        innerHTML: `<p>Users: ${id}</p>`
                     });
+                    
+                    // Users в createUserArea
+                    const user = createDiv({
+                        id: id,
+                        className: `user${id}`,
+                        innerHTML: `<p>Users: ${id}</p>`
+                    })
 
                     const wordName = createDiv({
                         innerHTML: "<p>Name: </p>",
@@ -58,12 +79,28 @@ const createUserPage = () => {
                         className: `useremail`
                     });
                 
+                    // Кнопка Delete в createUserArea
+                    function clickDelete(id) {
+                   
+                    }
+
+                    const buttonDelete = creatButton({
+                        className: "deleteBlock",
+                        innerHTML: "X",
+                        id: id,
+                        clickFn: clickDelete(id)
+                    })
+
                     userPage.appendChild(createUserArea);
-                    createUserArea.appendChild(wordName);
-                    createUserArea.appendChild(wordEmail);
+                    createUserArea.appendChild(user)
+                    createUserArea.appendChild(buttonDelete)
+                    
+                    user.appendChild(wordName);
+                    user.appendChild(wordEmail);
                     wordName.appendChild(nameUser);
                     wordEmail.appendChild(emailUser)
                     }
+
     
         for (let i=0; i < arr.length; i++) {
             createUserInform(arr[i].id, arr[i].name, arr[i].email)
@@ -73,24 +110,7 @@ const createUserPage = () => {
     userPage.addEventListener("load", downloadUsers())
 
     return userPage
-}
 
-
-// Кнопки цвета при нажатии
-export function clickButtomColor() {
-    let elements = document.querySelectorAll(".button:hover")
-    let arrHover = Array.from(elements)
-    let buttonHover = arrHover[0];
-
-    let buttonAll = document.querySelectorAll("button")
-    let arrAll = Array.from(buttonAll)
-    for (let button of arrAll) {
-        if (button == buttonHover) {
-            button.style.backgroundColor = "yellow"
-        } else {
-            button.style.background = ""
-        }
-    }
 };
 
 // 3.

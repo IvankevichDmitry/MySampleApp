@@ -1,7 +1,7 @@
 /* ------- ОБЩИЕ НАСТРОЙКИ СТРАНИЦЫ ------- */
 html {
     height: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 body {
@@ -93,7 +93,9 @@ body {
     background-color: rgb(19, 156, 211);
 }
 
-/* -------- 2.2 Pages ------------*/
+/* ---------------------- 2.2 Pages (правая часть) --------------------*/
+
+/*  ----------------- 1. Users   ------------------*/
 .pages {
     margin: 0px;
     width: 100%;
@@ -101,7 +103,7 @@ body {
 }
 
 /* Скрол */
-.pages .userPage:hover {
+/* .pages .userPage:hover {
     overflow-y: scroll;
     height: 800px;
 }
@@ -116,7 +118,32 @@ body {
 .pages .userPage::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: linear-gradient(180deg, #00c6fb, #005bea);
-  }
+  } */
+
+/* -------- Форма ------*/
+
+.creatFormAddUsers {
+    border: 1px solid black;
+    width: 30%;
+    height: 120px;
+    padding: 20px;
+    margin: 10px 35% 10px 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 700;
+    background: linear-gradient(180deg, #00c6fb, #005bea);
+}
+
+.creatFormAddUsers p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.creatFormAddUsers input {
+    height: 30px;
+}
 
 /* Информация по пользователям */
 .userPage {
@@ -127,10 +154,23 @@ body {
 }
 
 .userInformation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     font-size: 15px;
     margin: 10px;
     border: 1px solid white;
-    color: white
+    color: white;
+}
+
+.userInformation button {
+    font-weight: 700px;
+    color: red;
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    margin-right: 30px;
 }
 
 .userPage h2 {
