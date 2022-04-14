@@ -1,6 +1,7 @@
 import { createDiv, creatInput } from "../../helpers/creators";
 import { creatButton } from "../../helpers/creators";
 import { animationLine } from "../../helpers/animation";
+import { addForm } from "./userForm";
 
 const createUserPage = () => {
     const userPage = createDiv({
@@ -15,38 +16,16 @@ const createUserPage = () => {
 
         userPage.innerHTML = ""
         
-                                const createTitle = createDiv({
-                                    innerHTML: "<h2>Users</h2>"
-                                });
-                                userPage.appendChild(createTitle)
+                    const createTitle = createDiv({
+                    innerHTML: "<h2>Users</h2>"
+                    });
+                    userPage.appendChild(createTitle)
 
-                                        const createFormAddUsers = createDiv({
-                                            className: "creatFormAddUsers",
-                                            innerHTML: "<p>Enter a new user</p>"
-                                        });
-                                        userPage.appendChild(createFormAddUsers)
+                    // Кнопка и форма
+                    addForm()
 
-                                        const createNameInput = creatInput({
-                                            type: "text",
-                                            id: "name",
-                                            className: "name",
-                                            text: "Name"
-                                        });
-
-                                        console.log(createNameInput)
-
-                                        const createMailInput = creatInput({
-                                            type: "text",
-                                            id: "mail",
-                                            className: "mail"
-                                        })
-                                        createFormAddUsers.appendChild(createNameInput)
-                                        createNameInput.before("Name")
-                                        createFormAddUsers.appendChild(createMailInput)
-                                        createMailInput.before("Mail")
-
+                    // Загрузка пользователей                         
                     function createUserInform(id, fullName, email) {
-
                     const createUserArea = createDiv({
                         id: id,
                         className: `userInformation ${id}`,
@@ -108,7 +87,6 @@ const createUserPage = () => {
     };
     
     userPage.addEventListener("load", downloadUsers())
-
     return userPage
 
 };

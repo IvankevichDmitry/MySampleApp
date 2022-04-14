@@ -38,7 +38,7 @@ export const createDiv = ({ className, innerHTML, id, appendChildElement}) => {
     return div
 }
 
-export const creatInput = ({type, id, className}) => {
+export const creatInput = ({type, id, name, className}) => {
     const input = document.createElement("input");
     if (type)
     input.type = type
@@ -46,7 +46,19 @@ export const creatInput = ({type, id, className}) => {
     input.id = id
     if (className)
     input.className = className
+    if (name)
+    input.name = name
     return input
+}
+
+export const createForm = ({id, className, innerHTML}) => {
+    const form = document.createElement("form");
+    if (id)
+    form.id = id;
+    if(className)
+    form.className = className
+    if (innerHTML)
+    form.innerHTML = innerHTML
 }
 
 

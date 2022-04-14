@@ -59,7 +59,8 @@ body {
 }
 
  /* Кнопки в меню */
- .leftmenu .button {
+ .leftmenu .button,
+ .buttonAddUsers {
     margin: 10px;
     padding: 20px;
     height: 30px;
@@ -84,7 +85,18 @@ body {
     background-position: 50% 50%;
 }
 
-.leftmenu .button:hover {
+.buttonAddUsers {
+    margin-top: 50px;
+    background-size: 100%;
+    background-image: url("/img/2.png");
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+}
+
+
+.leftmenu .button:hover,
+.buttonAddUsers:hover,
+.creatFormAddUsers input:hover{
     box-shadow: 0 0 10px white;
     -moz-box-shadow: 0 0 10px white;
     -o-box-shadow: 0 0 10px white;
@@ -122,7 +134,7 @@ body {
 
 /* -------- Форма ------*/
 
-.creatFormAddUsers {
+form {
     border: 1px solid black;
     width: 30%;
     height: 120px;
@@ -143,7 +155,19 @@ body {
 
 .creatFormAddUsers input {
     height: 30px;
+} 
+
+input[type=submit] {
+    width: 100px;
+    height: 30px;
+    margin: 10px auto 10px auto;
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
 }
+
 
 /* Информация по пользователям */
 .userPage {
