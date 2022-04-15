@@ -12,7 +12,8 @@ const createUserPage = () => {
 
     async function downloadUsers() {
         const response = await fetch("http://localhost:5555/users");
-        const arr = await response.json();
+        const data = await response.json()
+        const users = data.reverse()
 
         userPage.innerHTML = ""
         
@@ -25,7 +26,7 @@ const createUserPage = () => {
                     addForm()
 
                     // Загрузка пользователей                         
-                    function createUserInform(id, fullName, email) {
+                    function createUserInform(id, fullName, email, ind) {
                     const createUserArea = createDiv({
                         id: id,
                         className: `userInformation ${id}`,
@@ -34,8 +35,7 @@ const createUserPage = () => {
                     // Users в createUserArea
                     const user = createDiv({
                         id: id,
-                        className: `user${id}`,
-                        innerHTML: `<p>Users: ${id}</p>`
+                        innerHTML: `<p>User: ${ind}</p>`
                     })
 
                     const wordName = createDiv({
@@ -81,8 +81,8 @@ const createUserPage = () => {
                     }
 
     
-        for (let i=0; i < arr.length; i++) {
-            createUserInform(arr[i].id, arr[i].name, arr[i].email)
+        for (let i=0; i < users.length; i++) {
+            createUserInform(users[i].id, users[i].name, users[i].email, i+1)
           };
     };
     
