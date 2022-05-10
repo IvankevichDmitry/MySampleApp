@@ -85,6 +85,13 @@ body {
     background-position: 50% 50%;
 }
 
+.leftmenu .button:nth-child(3) {
+    background-size: 90%;
+    background-image: url("/img/information.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
 .buttonAddUsers {
     margin-top: 50px;
     background-size: 100%;
@@ -332,6 +339,32 @@ input[type=submit] {
 }
 .switch input[type="checkbox"]:checked ~ div:before {
     background-color: var(--active-track-color);
+}
+
+/* ------------------------2. Settings ----------------------------- */
+
+.informationPage {
+    text-align: center;
+    margin: 30px;
+    color: white;
+}
+
+.informationText {
+    border: 1px solid black;
+    margin: auto;
+    width: 90%;
+    font-family: Snell Roundhand, cursive;
+    font-size: 20px;
+    color: white;
+}
+
+.informationTechnology {
+    border: 1px solid black;
+    margin: 50px auto;
+    width: 90%;
+    font-family: Snell Roundhand, cursive;
+    font-size: 30px;
+    color: white;
 }
 
 /* ----------- Полоса загрузки ------------ */

@@ -10,12 +10,13 @@ const createMain = () => {
         className: 'main'
     })
 
+    
     let menu = createMenu()
     let pages = createPages()
 
+
     main.appendChild(menu)
     main.appendChild(pages)
-
 
     return main
 }

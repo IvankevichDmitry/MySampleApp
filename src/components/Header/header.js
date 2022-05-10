@@ -15,7 +15,7 @@ const creatHeader = () => {
 
   const createName = createDiv({
     className: 'infName',
-    innerHTML: "<strong>Дмитрий</strong>"
+    innerHTML: "<strong>My personal contact book <br> <p>  Be sure to look at the information about the project (3 button in the menu)</p></strong>"
   })
 
   header.appendChild(logo)

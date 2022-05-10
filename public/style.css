@@ -31,11 +31,20 @@ body {
     width: 150px;
 }
 
-.infName {
-    margin: 10px 50px 10px 0px;
+.infName{
+    margin: 30px 100px 10px 0px;
     color: white;
     font-size: 20px;
     font-style: oblique;
+    
+}
+
+.infName strong {
+    font-size: 30px;
+}
+
+.infName p {
+    font-size: 20px;
 }
 
 /* --------------------- 2  ГЛАВНАЯ СТАРНИЦА ------------------*/
@@ -83,12 +92,20 @@ body {
     background-position: 50% 50%;
 }
 
+.leftmenu .button:nth-child(3) {
+    background-size: 90%;
+    background-image: url("/img/information.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
 .buttonAddUsers {
     margin-top: 50px;
     background-size: 100%;
     background-image: url("/img/2.png");
     background-repeat: no-repeat;
     background-position: 0% 50%;
+    margin: 20px;
 }
 
 
@@ -302,6 +319,28 @@ text-align: center;
     background-color: var(--active-track-color);
 }
 
+/* ------------------------2. Settings ----------------------------- */
+
+.informationPage {
+    text-align: center;
+    margin: 30px;
+}
+
+.informationText {
+    border: 1px solid black;
+    margin: auto;
+    width: 90%;
+    font-family: Snell Roundhand, cursive;
+    font-size: 20px;
+}
+
+.informationTechnology {
+    border: 1px solid black;
+    margin: 50px auto;
+    width: 90%;
+    font-family: Snell Roundhand, cursive;
+    font-size: 30px;
+}
 
 /* ----------- Полоса загрузки ------------ */
   .areaLine {

@@ -4,6 +4,7 @@ import { createSection, creatButton } from "../../helpers/creators";
 
 import createSettingsPage from "../Pages/settingsPage";
 import createUserPage from "../Pages/userPage";
+import createInformationPage from "../Pages/informationPage";
 
 import { clickButtomColor } from "../../helpers/color";
 
@@ -39,8 +40,16 @@ const createMenu = () => {
         clickColor: clickButtomColor
     })
 
+    const informationButton = creatButton({
+        className: "button button3",
+        id: "informationButton",
+        clickFn: apdatePages(createInformationPage),
+        clickColor: clickButtomColor
+    })
+
     menu.appendChild(usersButton)
     menu.appendChild(settingButton)
+    menu.appendChild(informationButton)
     return menu;
 };
 

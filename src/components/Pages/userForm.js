@@ -2,7 +2,7 @@ import { createDiv, creatInput } from "../../helpers/creators";
 import { creatButton } from "../../helpers/creators";
 import createUserPage from "./userPage";
 
-// Создаем форму
+// Добавляем форму
 export function addForm() {
     const createFormDiv = createDiv({
         className: "createFormDiv"
@@ -12,10 +12,12 @@ export function addForm() {
     const buttonAddUsers = creatButton({
         className: "buttonAddUsers",
         id: "buttonAddUsers",
+        title: "Add users",
         clickFn: createForm
     });
     userPage.appendChild(buttonAddUsers)
 
+    // Создаем форму по вызову
     function createForm() {
         const FormDiv = document.querySelector('.createFormDiv');
         FormDiv.innerHTML = "";
@@ -75,7 +77,7 @@ export function addForm() {
             };
 
             try {
-                let response = await fetch("http://localhost:55555/users", {
+                let response = await fetch("http://localhost:5555/users", {
                     method: "POST",
                     headers: {
                         'Content-Type': 'application/json;charset=utf-8'
